@@ -49,7 +49,7 @@ Promo
 -----
 
 .. image:: images/video.png
-    :target: https://www.youtube.com/watch?v=VhvVPNhoPl4
+    :target: https://www.youtube.com/watch?v=GuJlxgkfWXI
 
 Warning
 -------
