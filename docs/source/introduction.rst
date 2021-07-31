@@ -43,7 +43,7 @@ Requirements
    
 * **Python 3.9.5**
    
-   **PyTravLITE** was written using the C implementation of Classic Python
+   **PyTravLITE** was written using the C implementation of Python
    version 3.9.5. Also known as CPython.
    
 * **bottle 0.12.19**
