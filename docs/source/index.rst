@@ -6,7 +6,7 @@
 What began as a DOS prompt NPC generator escalated into a web-browsed one...
 
 **PyTravLITE** is an easy-to-use open source NPC generator for Mongoose Traveller 1st and 2nd Editions. It's written
-in Python 3.9.5 and includes **diceroll 3.3** for its die rolling. Source for **diceroll 3.3** can be found at
+in Python 3.9.5 and includes **PyDiceroll 3.3** for its die rolling. Source for **PyDiceroll 3.3** can be found at
 its `GitHub
 <https://github.com/ShawnDriscoll/pydiceroll/>`__ repository.
 
