@@ -7,6 +7,10 @@
 .. image:: https://readthedocs.org/projects/pytravliteguide/badge/?version=latest
     :target: http://pytravliteguide.readthedocs.io/en/latest/?badge=latest
     :alt: Doc Status
+	
+.. image:: https://img.shields.io/github/stars/ShawnDriscoll/PyTraveller-NPC-LITE.svg
+	:target: https://github.com/ShawnDriscoll/PyTraveller-NPC-LITE/stargazers
+    :alt: Stars
 
 
 
