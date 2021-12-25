@@ -1,7 +1,7 @@
-.. image:: docs/source/python_v3_9_5_tag.png
+.. image:: docs/source/python_v3_9_7_tag.png
     :target: https://www.python.org/downloads/release/python-395/
     
-.. image:: docs/source/release_v0_2_5_tag.png
+.. image:: docs/source/release_v0_2_6_tag.png
     :target: https://readthedocs.org/projects/pytravliteguide/downloads/pdf/latest
     
 .. image:: https://readthedocs.org/projects/pytravliteguide/badge/?version=latest
@@ -13,7 +13,7 @@
 
 
 
-**PyTravLITE 0.2.5: CharGen for Traveller**
+**PyTravLITE 0.2.6: CharGen for Traveller**
 ===========================================
 
 .. figure:: images/pytravlite_book_cover_art.png
@@ -34,10 +34,10 @@ Requirements
 
    It might not work in OSX or Linux.
    
-* **Python 3.9.5**
+* **Python 3.9.7**
    
    **PyTravCalc** was written using the C implementation of Python
-   version 3.9.5. Also known as CPython.
+   version 3.9.7. Also known as CPython.
 
 * **bottle 0.12.19**
 
@@ -65,5 +65,5 @@ Contact
 Questions? Please contact shawndriscoll@hotmail.com
 
 The Traveller game in all forms is owned by Far Future Enterprises.
-Copyright 1977 - 2021 Far Future Enterprises.
+Copyright 1977 - 2022 Far Future Enterprises.
 Traveller is a registered trademark of Far Future Enterprises.

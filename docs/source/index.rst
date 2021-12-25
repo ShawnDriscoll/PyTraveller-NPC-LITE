@@ -6,7 +6,7 @@
 What began as a DOS prompt NPC generator escalated into a web-browsed one...
 
 **PyTravLITE** is an easy-to-use open source NPC generator for Mongoose Traveller 1st and 2nd Editions. It's written
-in Python 3.9.5 and includes **PyDiceroll 3.3** for its die rolling. Source for **PyDiceroll 3.3** can be found at
+in Python 3.9.7 and includes **PyDiceroll 3.4** for its die rolling. Source for **PyDiceroll 3.4** can be found at
 its `GitHub
 <https://github.com/ShawnDriscoll/pydiceroll/>`__ repository.
 
@@ -14,17 +14,17 @@ its `GitHub
 
 This documentation explains how to install and use **PyTravLITE** for Traveller NPC generation.
 
-.. image:: python_v3_9_5_tag.png
-    :target: https://www.python.org/downloads/release/python-395/
+.. image:: python_v3_9_7_tag.png
+    :target: https://www.python.org/downloads/release/python-397/
     
-.. image:: release_v0_2_5_tag.png
+.. image:: release_v0_2_6_tag.png
 
 .. image:: https://readthedocs.org/projects/pytravliteguide/badge/?version=latest
     :target: http://pytravliteguide.readthedocs.io/en/latest/?badge=latest
     :alt: Doc Status
 	
 The Traveller game in all forms is owned by Far
-Future Enterprises. Copyright 1977 - 2021 Far Future
+Future Enterprises. Copyright 1977 - 2022 Far Future
 Enterprises. Traveller is a registered trademark of Far
 Future Enterprises.
 
@@ -33,6 +33,7 @@ Future Enterprises.
 
    introduction
    installing
+   whats_new
    tutorial
    saveddata
    license

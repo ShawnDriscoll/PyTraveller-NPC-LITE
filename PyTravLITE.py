@@ -1,8 +1,8 @@
 #
-# LITE chargen app for Traveller NPCs v0.2.5.
+# LITE chargen app for Traveller NPCs v0.2.6.
 # https://github.com/ShawnDriscoll/Traveller-NPC-LITE
 #
-# This LITE CharGen for Traveller is a Python 3.9.5 program for generating
+# This LITE CharGen for Traveller is a Python 3.9.7 program for generating
 # NPCs for Traveller.
 #
 # bottle testing has begun with the release of 0.1.0.
@@ -11,7 +11,7 @@
 #
 #
 # The Traveller game in all forms is owned by Far Future Enterprises.
-# Copyright 1977 - 2021 Far Future Enterprises.
+# Copyright 1977 - 2022 Far Future Enterprises.
 # Traveller is a registered trademark of Far Future Enterprises.
 #
 
@@ -24,7 +24,7 @@ import json
 
 
 __author__ = 'Shawn Driscoll <shawndriscoll@hotmail.com>\nshawndriscoll.blogspot.com'
-__version__ = '0.2.5'
+__version__ = '0.2.6'
 __app__ = 'PyTravLITE ' + __version__
 
 
@@ -257,6 +257,15 @@ def app():
                     'Extreme',
                     'Supreme']
     
+    # Character Quirks
+
+    quirks_table = [['Loyal', 'Distracted by other worries', 'In debt to criminals', 'Makes very bad jokes', 'Will betray characters', 'Aggressive'],
+                    ['Has secret allies', 'Secret anagathic user', 'Looking for something', 'Helpful', 'Forgetful', 'Wants to hire the Travellers'],
+                    ['Has useful contacts', 'Artistic', 'Easily confused', 'Unusually ugly', 'Worried about current situation', 'Shows pictures of his/her children'],
+                    ['Rumor-monger', 'Unusually provincial', 'Drunkard or drug addict', 'Government informant', 'Mistakes a Traveller for someone else', 'Possesses unusually advanced technology'],
+                    ['Unusually handsome or beautiful', 'Spying on the Travellers', 'Possesses TAS membership', 'Is secretly hostile towards the Travellers', 'Wants to borrow money', 'Is convinced the Travellers are dangerous'],
+                    ['Involved in political intrigue', 'Has a dangerous secret', 'Wants to get off planet as soon as possible', 'Attracted to a Traveller', 'From offworld', 'Possesses telepathy or other unusual quality']]
+
     male = 'Male'
     female = 'Female'
     sex = ''
@@ -587,7 +596,11 @@ def app():
                         if skill_count == 6 and i != key_count - 1:
                             npc_list += '<br>'
                             skill_count = 0
-                    npc_list = npc_list[0:len(npc_list) - 2] + '<br><br><br>'
+                    npc_list = npc_list[0:len(npc_list) - 2] + '<br>'
+
+                    # Add Quirk
+                    character_quirk = quirks_table[roll('d6-1')][roll('d6-1')]
+                    npc_list += character_quirk + '<br><br><br>'
 
                     if no_of_npcs > 1:
                         npc_list += '''</td>
@@ -610,10 +623,9 @@ def app():
                     'Social_Class': social_class[vp_soc],
                     'Terms': temp_terms,
                     'Career': job,
-                    'Skills': trained_skills
-                    })
-                    
-                    
+                    'Skills': trained_skills,
+                    'Quirk': character_quirk
+                    })                
                     
                     log.info(full_name + ' was generated.')
                     
