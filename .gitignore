@@ -23,7 +23,6 @@ Desktop.ini
 __pycache__/
 data/
 
-
 ##################
 ## Python Packages
 ##################
@@ -54,9 +53,11 @@ temp/
 ##############
 *.ui
 *.qrc
+*.bat
 
 
 ##############
 ## PyInstaller
 ##############
 *.spec
+build/
