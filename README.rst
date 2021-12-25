@@ -54,6 +54,13 @@ Promo
 .. image:: images/video.png
     :target: https://www.youtube.com/watch?v=GuJlxgkfWXI
 
+
+New in version 0.2.6
+--------------------
+
+.. image:: images/video2.png
+    :target: https://www.youtube.com/watch?v=3KpzODHM9Tw
+
 Warning
 -------
 
