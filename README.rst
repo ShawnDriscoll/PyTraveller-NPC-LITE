@@ -9,7 +9,7 @@
     :alt: Doc Status
 	
 .. image:: https://img.shields.io/github/stars/ShawnDriscoll/PyTraveller-NPC-LITE.svg
-	:target: https://github.com/ShawnDriscoll/PyTraveller-NPC-LITE/stargazers
+    :target: https://github.com/ShawnDriscoll/PyTraveller-NPC-LITE/stargazers
 
 
 
@@ -19,7 +19,7 @@
 .. figure:: images/pytravlite_book_cover_art.png
 
 
-**PyTravLITE** is a Python 3.x program for generating NPCs for Traveller in a web browser.
+**PyTravLITE** is a Python 3.x program that generates NPCs for Mongoose Traveller 1st and 2nd Editions in a web browser.
 
 Read the **PyTravLITE Guide** at http://pytravliteguide.readthedocs.io
 
