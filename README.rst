@@ -86,11 +86,11 @@ Things To-Do
 
 **Known History**
 
-* v0.2.7b
+* v0.2.7
 
   Default dice roll choice is now 2D6 if left blank.
 
-* v0.2.6b
+* v0.2.6
 
   Quirks have been added for NPCs.
 
