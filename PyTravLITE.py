@@ -1,8 +1,8 @@
 #
-# LITE chargen app for Traveller NPCs v0.2.6.
-# https://github.com/ShawnDriscoll/Traveller-NPC-LITE
+# LITE chargen app for Traveller NPCs v0.2.7.
+# https://github.com/ShawnDriscoll/PyTraveller-NPC-LITE
 #
-# This LITE CharGen for Traveller is a Python 3.9.7 program for generating
+# This LITE CharGen for Traveller is a Python 3.9.11 program for generating
 # NPCs for Traveller.
 #
 # bottle testing has begun with the release of 0.1.0.
@@ -24,7 +24,7 @@ import json
 
 
 __author__ = 'Shawn Driscoll <shawndriscoll@hotmail.com>\nshawndriscoll.blogspot.com'
-__version__ = '0.2.6'
+__version__ = '0.2.7'
 __app__ = 'PyTravLITE ' + __version__
 
 
@@ -397,6 +397,8 @@ def app():
             no_of_npcs = 1
         else:
             no_of_npcs = int(no_of_npcs)
+        if roll_type == '':
+            roll_type = '2d6'
 
         if check_number(no_of_npcs, 1, 100):
             if sex_chosen == 'Random':
@@ -657,7 +659,7 @@ def app():
 
 if __name__ == '__main__':
     
-    log = logging.getLogger(__app__)
+    log = logging.getLogger('PyTravLITE')
     log.setLevel(logging.DEBUG)
 
     if not os.path.exists('Logs'):

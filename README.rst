@@ -1,7 +1,7 @@
-.. image:: docs/source/python_v3_9_7_tag.png
-    :target: https://www.python.org/downloads/release/python-395/
+.. image:: docs/source/python_v3_9_11_tag.png
+    :target: https://www.python.org/downloads/release/python-3911/
     
-.. image:: docs/source/release_v0_2_6_tag.png
+.. image:: docs/source/release_v0_2_7_tag.png
     :target: https://readthedocs.org/projects/pytravliteguide/downloads/pdf/latest
     
 .. image:: https://readthedocs.org/projects/pytravliteguide/badge/?version=latest
@@ -13,7 +13,7 @@
 
 
 
-**PyTravLITE 0.2.6: CharGen for Traveller**
+**PyTravLITE 0.2.7: CharGen for Traveller**
 ===========================================
 
 .. figure:: images/pytravlite_book_cover_art.png
@@ -34,10 +34,10 @@ Requirements
 
    It might not work in OSX or Linux.
    
-* **Python 3.9.7**
+* **Python 3.9.11**
    
    **PyTravCalc** was written using the C implementation of Python
-   version 3.9.7. Also known as CPython.
+   version 3.9.11. Also known as CPython.
 
 * **bottle 0.12.19**
 
@@ -60,6 +60,40 @@ New in version 0.2.6
 
 .. image:: images/video2.png
     :target: https://www.youtube.com/watch?v=3KpzODHM9Tw
+
+
+.. |ss| raw:: html
+
+    <strike>
+
+.. |se| raw:: html
+
+    </strike>
+
+Things To-Do
+------------
+
+| Add faction types?
+| Add equipment?
+| Cheat codes.
+|ss|
+
+| Convert to Python 3.9.
+| Instruction manual.
+| Start on a To-Do.
+
+|se|
+
+**Known History**
+
+* v0.2.7b
+
+  Default dice roll choice is now 2D6 if left blank.
+
+* v0.2.6b
+
+  Quirks have been added for NPCs.
+
 
 Warning
 -------
