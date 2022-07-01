@@ -1,1 +1,1 @@
-call pyinstaller -F --collect-all colorama -i ptl.ico PyTravLITE.py
+call pyinstaller -F -i ptl.ico PyTravLITE.py

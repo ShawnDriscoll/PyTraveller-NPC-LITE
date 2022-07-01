@@ -1,6 +1,12 @@
 **What's New?**
 ===============
 
+New in version 0.3.0
+--------------------
+
+Colorama is no longer required.
+
+
 New in version 0.2.7
 --------------------
 

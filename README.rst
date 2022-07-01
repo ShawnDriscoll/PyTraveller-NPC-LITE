@@ -1,7 +1,7 @@
 .. image:: docs/source/python_v3_9_11_tag.png
     :target: https://www.python.org/downloads/release/python-3911/
     
-.. image:: docs/source/release_v0_2_7_tag.png
+.. image:: docs/source/release_v0_3_0_tag.png
     :target: https://readthedocs.org/projects/pytravliteguide/downloads/pdf/latest
     
 .. image:: https://readthedocs.org/projects/pytravliteguide/badge/?version=latest
@@ -13,7 +13,7 @@
 
 
 
-**PyTravLITE 0.2.7: CharGen for Traveller**
+**PyTravLITE 0.3.0: CharGen for Traveller**
 ===========================================
 
 .. figure:: images/pytravlite_book_cover_art.png
@@ -42,10 +42,6 @@ Requirements
 * **bottle 0.12.19**
 
    bottle testing has begun with the release of 0.1.0.
-   
-* **colorama 0.4.4**
-
-   Because the dice roller may have some colored text messages for debugging.
 
 
 Promo
@@ -78,6 +74,7 @@ Things To-Do
 | Cheat codes.
 |ss|
 
+| Remove colorama code requirement.
 | Convert to Python 3.9.
 | Instruction manual.
 | Start on a To-Do.
@@ -85,6 +82,10 @@ Things To-Do
 |se|
 
 **Known History**
+
+* v0.3.0
+
+  Removed requirement for colorama.
 
 * v0.2.7
 

@@ -1,5 +1,5 @@
 #
-# LITE chargen app for Traveller NPCs v0.2.7.
+# LITE chargen app for Traveller NPCs v0.3.0.
 # https://github.com/ShawnDriscoll/PyTraveller-NPC-LITE
 #
 # This LITE CharGen for Traveller is a Python 3.9.11 program for generating
@@ -24,7 +24,7 @@ import json
 
 
 __author__ = 'Shawn Driscoll <shawndriscoll@hotmail.com>\nshawndriscoll.blogspot.com'
-__version__ = '0.2.7'
+__version__ = '0.3.0'
 __app__ = 'PyTravLITE ' + __version__
 
 
@@ -542,7 +542,7 @@ def app():
 
                     if no_of_npcs > 1:
                         npc_list += '''<tr>
-    <td>''' + '%s.<br><br><br><br><br><br></td>' % (i + 1)
+    <td>''' + '%s<br><br><br><br><br><br></td>' % ('{0:03d}'.format(i + 1))
                         npc_list += '''
     <td>'''
                     npc_list += full_name + ' [' + hex_code[characteristic['STR']] + \

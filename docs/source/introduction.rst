@@ -50,10 +50,6 @@ Requirements
 
    bottle is the web framework used for serving the web page requests.
 
-* **colorama 0.4.4**
-
-   Because CMD may have some colored text messages for debugging.
-
    
 .. Warning::
    **PyTravLITE** will not work with **Python 2.7-**.
