@@ -1,1 +1,0 @@
-call pyinstaller -F -i ptl.ico PyTravLITE.py
