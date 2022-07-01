@@ -41,4 +41,6 @@ will have longer names and include the homeworld they are from.
 Next is the NPC's UPP, their sex, and age. The social class that the NPC was raised in is shown, along with how many terms
 they were in a career.
 
-And last is the NPC's list of skills.
+Followed by the NPC's list of skills.
+
+And last is the NPC's quirk.
