@@ -6,10 +6,10 @@ Installing and using **PyTravLITE** seems simple enough. Just download the archi
 
 Running PyTravLITE
 ------------------
-If you have Python 3.9.11 installed, you can start ``PyTravLITE.py`` from a CMD prompt or double-click
+If you have Python 3.9 installed, you can start ``PyTravLITE.py`` from a CMD prompt or double-click
 the Python script.
 
-Alternatively, if you do not have Python 3.9.11, you can start ``PyTravLITE.exe`` (located in the
+Alternatively, if you do not have Python 3.9, you can start ``PyTravLITE.exe`` (located in the
 dist folder) from a CMD prompt or by double-clicking the executable program.
 
 Output to DOS has been depricated in this version.

@@ -1,31 +1,16 @@
-.. image:: docs/source/python_v3_9_11_tag.png
-    :target: https://www.python.org/downloads/release/python-3911/
-    
-.. image:: docs/source/release_v0_3_0_tag.png
-    :target: https://readthedocs.org/projects/pytravliteguide/downloads/pdf/latest
-    
-.. image:: https://readthedocs.org/projects/pytravliteguide/badge/?version=latest
-    :target: http://pytravliteguide.readthedocs.io/en/latest/?badge=latest
-    :alt: Doc Status
-	
-.. image:: https://img.shields.io/github/stars/ShawnDriscoll/PyTraveller-NPC-LITE.svg
-    :target: https://github.com/ShawnDriscoll/PyTraveller-NPC-LITE/stargazers
 
-
-
-**PyTravLITE 0.3.0: CharGen for Traveller**
+**PyTravLITE: CharGen for Traveller**
 ===========================================
 
 .. figure:: images/pytravlite_book_cover_art.png
 
 
-**PyTravLITE** is a Python 3.x program that generates NPCs for Mongoose Traveller 1st and 2nd Editions in a web browser.
+**PyTravLITE** is a Python 3.9 program that generates NPCs for Mongoose Traveller 1st and 2nd Editions in a web browser.
 
 Read the **PyTravLITE Guide** at http://pytravliteguide.readthedocs.io
 
 Download the PDF from https://readthedocs.org/projects/pytravliteguide/downloads/pdf/latest
 
-or the EPUB from https://readthedocs.org/projects/pytravliteguide/downloads/epub/latest
 
 Requirements
 ------------
@@ -34,10 +19,10 @@ Requirements
 
    It might not work in OSX or Linux.
    
-* **Python 3.9.11**
+* **Python 3.9**
    
    **PyTravCalc** was written using the C implementation of Python
-   version 3.9.11. Also known as CPython.
+   version 3.9. Also known as CPython.
 
 * **bottle 0.12.19**
 

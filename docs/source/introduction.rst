@@ -41,10 +41,10 @@ Requirements
    **PyTravLITE** has been tested on Windows 10 only.
    It has not been tested on MacOS or Linux.
    
-* **Python 3.9.11**
+* **Python 3.9**
    
    **PyTravLITE** was written using the C implementation of Python
-   version 3.9.11. Also known as CPython.
+   version 3.9. Also known as CPython.
    
 * **bottle 0.12.19**
 
