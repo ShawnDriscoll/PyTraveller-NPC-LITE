@@ -68,6 +68,10 @@ Things To-Do
 
 **Known History**
 
+* v0.3.1
+
+  Restored skills back to their original Mongoose Traveller names.
+
 * v0.3.0
 
   Removed requirement for colorama.

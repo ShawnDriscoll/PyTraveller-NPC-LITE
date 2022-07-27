@@ -64,4 +64,5 @@ temp/
 ## PyInstaller
 ##############
 *.spec
-build/
+#build/
+#dist/
