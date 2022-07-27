@@ -68,6 +68,12 @@ Things To-Do
 
 **Known History**
 
+* v0.3.2
+
+  Removed most of the generic skills in favor of specialized ones.
+  199 NPC's can be generated at once now.
+  Some NPCs will default to speaking Vilani instead of Anglic.
+
 * v0.3.1
 
   Restored skills back to their original Mongoose Traveller names.

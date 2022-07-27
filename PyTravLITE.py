@@ -1,5 +1,5 @@
 #
-# LITE chargen app for Traveller NPCs v0.3.1.
+# LITE chargen app for Traveller NPCs v0.3.2.
 # https://github.com/ShawnDriscoll/PyTraveller-NPC-LITE
 #
 # This LITE CharGen for Traveller is a Python 3.9.13 program for generating
@@ -24,7 +24,7 @@ import json
 
 
 __author__ = 'Shawn Driscoll <shawndriscoll@hotmail.com>\nshawndriscoll.blogspot.com'
-__version__ = '0.3.1'
+__version__ = '0.3.2'
 __app__ = 'PyTravLITE ' + __version__
 
 
@@ -112,7 +112,10 @@ def app():
             name_title = 'Young'
             job = 'None'
         else:
-            skill['Anglic'] = 0        # Default skill
+            if roll('d2') == '1':
+                skill['Anglic'] = 0        # Default skill
+            else:
+                skill['Vilani'] = 0
             skill['Jack of all Trades'] = 0     # Default skill
             
             job = career[roll('1d12-1')]
@@ -171,58 +174,59 @@ def app():
 
     grinder = {               
                'Agent'      : ['INT', 3, ['Rookie', 'Agent', 'Field Agent', 'Field Agent', 'Special Agent', 'Assistant Director', 'Director'],
-                              ['Admin', 'Carouse', 'Comms', 'Computers', 'Deception', 'Investigate', 'Language',
-                               'Streetwise', 'Slug Pistol', 'Energy Pistol', 'Vilani', 'Zdetl', 'Small Craft',
-                               'Sophontology', 'Stealth', 'Recon']],
+                              ['Admin', 'Holography', 'Writing', 'Carouse', 'Comms', 'Computers', 'Deception', 'Wheeled', 'Electronics', 'Explosives',
+                               'Grav', 'Rotor', 'Wing', 'Gambler', 'Investigate', 'Unarmed Combat', 'Persuade', 'Motorboats',
+                               'Streetwise', 'Slug Pistol', 'Energy Pistol', 'Vilani', 'Zdetl', 'Stealth', 'Recon']],
                'Army'       : ['STR', 4, ['Private', 'Lance Corporal', 'Corporal', 'Lance Sergeant', 'Sergeant', 'Gunnery Sergeant', 'Sergeant Major'],
-                              ['Endurance', 'Athletics', 'Explosives', 'Gunner', 'Gun Combat', 'Leadership', 'Mechanic', 'Medic', 'Melee',
-                               'Remote Operations', 'Survival', 'Tactics', 'Tracked', 'Slug Rifle', 'Slug Pistol', 'Energy Rifle', 'Energy Pistol',
+                              ['Riding', 'Endurance', 'Explosives', 'Comms', 'Leadership', 'Mechanic', 'Medic',
+                               'Remote Operations', 'Survival', 'Military Tactics', 'Tracked', 'Slug Rifle', 'Slug Pistol', 'Energy Rifle', 'Energy Pistol',
                                'Unarmed Combat', 'Recon', 'Man Portable Artillery']],
                'Citizen'    : ['EDU', 3, ['Citizen', 'Citizen', 'Technician', 'Technician', 'Craftsman', 'Craftsman', 'Master Technician'],
-                              ['Admin', 'Animals', 'Art', 'Carouse', 'Computers', 'Driving', 'Engineer', 'Steward', 'Streetwise',
-                               'Trade', 'Veterinary', 'Vilani', 'Civil Engineering', 'Space Construction', 'Navigation', 'Hydroponics', 'Polymers', 'Belter', 'Vacc Suit',
-                               'Zero-G', 'Jack of all Trades']],
+                              ['Advocate', 'Holography', 'Broker', 'Computers', 'Wheeled', 'Grav', 'Gambler', 'Slug Pistol', 'Anglic', 'Vilani', 'Steward',
+                               'Streetwise', 'Trade', 'Veterinary', 'Civil Engineering', 'Space Construction', 'Navigation', 'Hydroponics',
+                               'Polymers', 'Belter', 'Mole', 'Mechanic', 'Vacc Suit', 'Zero-G', 'Jack of all Trades']],
                'Drifter'    : ['END', 3, ['Barbarian', 'Barbarian', 'Warrior', 'Warrior', 'Chieftain', 'Chieftain', 'Chieftain'],
-                              ['Deception', 'Gambler', 'Gun Combat', 'Jack of all Trades', 'Vilani', 'Melee', 'Recon', 'Streetwise',
-                               'Survival', 'Riding', 'Training', 'Farming', 'Co-ordination', 'Shotgun', 'Unarmed Combat',
-                               'Blade', 'Bludgeon', 'Natural Weapons', 'Belter', 'Navigation', 'Motorboats']],
+                              ['Deception', 'Gambler', 'Jack of all Trades', 'Vilani', 'Melee', 'Recon', 'Streetwise', 'Slug Rifle', 'Slug Pistol',
+                               'Survival', 'Riding', 'Training', 'Farming', 'Co-ordination', 'Endurance', 'Shotgun', 'Unarmed Combat',
+                               'Blade', 'Bludgeon', 'Natural Weapons', 'Belter', 'Navigation', 'Wheeled', 'Grav', 'Motorboats']],
                'Entertainer': ['SOC', 5, ['Extra', 'Extra', 'Extra', 'Extra', 'Extra', 'Extra', 'Famous Performer'],
-                              ['Advocate', 'Athletics', 'Art', 'Carouse', 'Steward', 'Riding', 'Acting', 'Writing', 'Dance', 'Sculpting',
-                               'Instrument', 'Wheeled', 'Wing', 'Vilani', 'Holography']],
+                              ['Co-ordination', 'Carouse', 'Steward', 'Riding', 'Acting', 'Writing', 'Dance', 'Streetwise',
+                               'Instrument', 'Wheeled', 'Wing', 'Vilani', 'Holography', 'Persuade', 'Deception']],
                'Marines'    : ['STR', 4, ['Marine', 'Lance Corporal', 'Corporal', 'Lance Sergeant', 'Sergeant', 'Gunnery Sergeant', 'Sergeant Major'],
-                              ['Battle Dress', 'Explosives', 'Heavy Weapons', 'Recon', 'Remote Operations', 'Sensors', 'Survival',
-                               'Tactics', 'Strength', 'Flying', 'Mole', 'Rotor', 'Energy Rifle', 'Launchers', 'Field Artillery',
+                              ['Battle Dress', 'Explosives', 'Recon', 'Remote Operations', 'Sensors', 'Survival',
+                               'Military Tactics', 'Strength', 'Flying', 'Mole', 'Rotor', 'Energy Rifle', 'Launchers', 'Field Artillery',
                                'Robotics', 'Military Tactics', 'Motorboats', 'Navigation']],
                'Merchants'  : ['INT', 3, ['Crewman', 'Senior Crewman', '4th Officer', '3rd Officer', '2nd Officer', '1st Officer', 'Captain'],
-                              ['Admin', 'Broker', 'Carouse', 'Deception', 'Language', 'Persuade', 'Piloting', 'Steward', 'Streetwise', 'Economics', 'Sophontology']],
+                              ['Admin', 'Broker', 'Carouse', 'Deception', 'Anglic', 'Vilani', 'Persuade', 'Steward', 'Streetwise', 'Economics',
+                               'Sophontology', 'Small Craft', 'Spacecraft']],
                'Navy'       : ['SOC', 6, ['Crewman', 'Able Spacehand', 'Petty Officer 3rd Class', 'Petty Officer 2nd Class', 'Petty Officer 1st Class', 'Chief Petty Officer', 'Master Chief'],
-                              ['Admin', 'Co-ordination', 'Astrogation', 'Comms', 'Computers', 'Diplomat', 'Engineer',
-                               'Flying', 'Gunner', 'Language', 'Leadership', 'Medic', 'Melee', 'Piloting', 'Seafarer', 'Sensors', 'Stealth', 'Tactics', 'Vacc Suit',
+                              ['Admin', 'Co-ordination', 'Astrogation', 'Comms', 'Computers', 'Diplomat',
+                               'Wing', 'Anglic', 'Vilani', 'Leadership', 'Medic', 'Sensors', 'Stealth', 'Tactics', 'Vacc Suit',
                                'Zero-G', 'Maneuver Drive', 'Jump Drive', 'Electronics', 'Grav', 'Turrets', 'Ortillery', 'Screens',
-                               'Capital Weapons', 'Anglic', 'Vilani', 'Unarmed Combat', 'Spacecraft', 'Capital Ships', 'Sail',
-                               'Submarine', 'Naval Tactics']],
+                               'Capital Weapons', 'Unarmed Combat', 'Small Craft', 'Spacecraft', 'Capital Ships', 'Sail',
+                               'Submarine', 'Naval Tactics', 'Blade', 'Ocean Ships']],
                'Nobility'   : ['SOC', 7, ['Wastrel', 'Wastrel', 'Ingrate', 'Ingrate', 'Black Sheep', 'Black Sheep', 'Scoundrel'],
-                              ['Admin', 'Advocate', 'Art', 'Carouse', 'Deception', 'Diplomat', 'Wheeled', 'Rotor', 'Athletics', 'Gambler', 'Language', 'Persuade',
-                               'Steward', 'Streetwise', 'Riding', 'Acting', 'Dance', 'Instrument', 'Sculpting', 'Slug Pistol', 'Blade', 'Small Craft',
+                              ['Admin', 'Advocate', 'Art', 'Carouse', 'Deception', 'Diplomat', 'Wheeled', 'Rotor', 'Co-ordination', 'Gambler', 'Vilani', 'Persuade',
+                               'Riding', 'Dance', 'Instrument', 'Sculpting', 'Slug Pistol', 'Blade', 'Small Craft',
                                'Archeology', 'Economics', 'History', 'Ocean Ships', 'Philosophy']],
                'Rogue'      : ['DEX', 4, ['Lackey', 'Henchman', 'Corporal', 'Sergeant', 'Lieutenant', 'Leader', 'Captain'],
-                              ['Athletics', 'Art', 'Astrogation', 'Battle Dress', 'Broker', 'Carouse', 'Comms', 'Computers', 'Deception', 'Diplomat', 'Driving', 'Explosives',
-                               'Flying', 'Gambler', 'Gun Combat', 'Jack of all Trades', 'Language', 'Leadership', 'Mechanic', 'Medic', 'Melee', 'Navigation', 'Persuade',
-                               'Piloting', 'Recon', 'Remote Operations', 'Seafarer', 'Sensors', 'Social Sciences', 'Stealth', 'Steward', 'Streetwise', 'Tactics', 'Vacc Suit',
-                               'Riding', 'Co-ordination', 'Flying', 'Dance', 'Holography', 'Wheeled', 'Jump Drive', 'Electronics', 'Grav', 'Slug Rifle', 'Slug Pistol',
+                              ['Co-ordination', 'Art', 'Astrogation', 'Broker', 'Carouse', 'Comms', 'Computers', 'Deception', 'Diplomat', 'Drive', 'Explosives',
+                               'Gambler', 'Leadership', 'Medic', 'Melee', 'Navigation', 'Persuade',
+                               'Recon', 'Remote Operations', 'Motorboats', 'Submarine', 'Sensors', 'Stealth', 'Streetwise', 'Military Tactics', 'Vacc Suit',
+                               'Riding', 'Co-ordination', 'Holography', 'Wheeled', 'Jump Drive', 'Grav', 'Slug Rifle', 'Slug Pistol',
                                'Shotgun', 'Unarmed Combat', 'Blade', 'Natural Weapons', 'Anglic', 'Vilani', 'Zdetl', 'Small Craft', 'Spacecraft',
-                               'Cybernetics', 'Archeology', 'Economics', 'Linguistics', 'Psychology', 'Robotics']],
+                               'Cybernetics', 'Archeology', 'Economics', 'Robotics']],
                'Scholar'    : ['EDU', 3, ['', '', '', '', '', '', ''],
-                              ['Astrogation', 'Computers', 'Engineer', 'Language', 'Life Sciences', 'Medic', 'Physical Sciences', 'Social Sciences', 'Space Sciences', 'Veterinary',
-                               'Holography', 'Writing', 'Gavitics', 'Jump Drive', 'Electronics', 'Life Support', 'Power', 'Anglic', 'Vilani', 'Zdetl', 'Oynprith',
-                               'Small Craft', 'Physics', 'Chemistry', 'Computer Science', 'Biology', 'Cybernetics', 'Genetics', 'Psionicology', 'Archeology', 'Economics', 'History', 'Linguistics',
+                              ['Astrogation', 'Computers', 'Medic', 'Veterinary',
+                               'Holography', 'Writing', 'Maneuver Drive', 'Jump Drive', 'Electronics', 'Life Support', 'Power', 'Anglic', 'Vilani', 'Zdetl', 'Oynprith',
+                               'Physics', 'Chemistry', 'Computer Science', 'Biology', 'Cybernetics', 'Genetics', 'Psionicology', 'Archeology', 'Economics', 'History', 'Linguistics',
                                'Philosophy', 'Psychology', 'Sophontology', 'Planetology', 'Robotics', 'Xenology', 'Biologicals', 'Hydroponics']],
                'Scout'      : ['END', 3, ['Trainee', 'Scout', 'Scout', 'Senior Scout', 'Senior Scout', 'Senior Scout', 'Senior Scout'],
-                              ['Athletics', 'Astrogation', 'Comms', 'Computers', 'Diplomat', 'Driving', 'Flying', 'Jack of all Trades',
-                               'Language', 'Life Sciences', 'Medic', 'Navigation', 'Piloting', 'Physical Sciences', 'Recon',
-                               'Remote Operations', 'Seafarer', 'Sensors', 'Space Sciences', 'Survival', 'Vacc Suit', 'Zero-G',
-                               'Riding', 'Co-ordination', 'Jump Drive', 'Life Support', 'Slug Rifle', 'Anglic', 'Vilani',
-                               'Zdetl', 'Rotor', 'Small Craft', 'Spacecraft', 'Biology', 'Archeology', 'History', 'Sophontology', 'Linguistics', 'Planetology', 'Xenology']]               
+                              ['Co-ordination', 'Astrogation', 'Comms', 'Computers', 'Diplomat', 'Drive', 'Grav',
+                               'Life Sciences', 'Medic', 'Navigation', 'Sail', 'Sensors', 'Survival', 'Vacc Suit', 'Zero-G',
+                               'Riding', 'Jump Drive', 'Life Support', 'Slug Rifle', 'Anglic', 'Vilani',
+                               'Zdetl', 'Rotor', 'Small Craft', 'Spacecraft', 'Biology', 'Archeology', 'History', 'Sophontology',
+                               'Linguistics', 'Planetology', 'Xenology']]               
               }
     
     social_standing_male = ['NOT USED','NOT USED','NOT USED','NOT USED','NOT USED','NOT USED',
@@ -370,8 +374,8 @@ def app():
     <br>
     <label for="sex_chosen">Sex (Male, Female, Random):</label><br>
     <input type="text" name="sex_chosen" value="Random"><br><br>
-    <label for="no_of_npcs">How many NPCs (1 - 100):</label><br>
-    <input type="text" name="no_of_npcs" value="10"><br><br>
+    <label for="no_of_npcs">How many NPCs (1 - 199):</label><br>
+    <input type="text" name="no_of_npcs" value="25"><br><br>
     <label for="roll_type">Characteristic Roll (2d6, Boon, 1d6+6, etc):</label><br>
     <input type="text" name="roll_type" value="2d6"><br><br>
     <input value="Generate" type="submit">
@@ -399,7 +403,7 @@ def app():
         if roll_type == '':
             roll_type = '2d6'
 
-        if check_number(no_of_npcs, 1, 100):
+        if check_number(no_of_npcs, 1, 199):
             if sex_chosen == 'Random':
                 random_sex = True
             else:
@@ -647,7 +651,7 @@ def app():
                 return "<p><br><br>Enter Sex. Not gender, please.</p>"
                                        
         else:
-            return "<p><br><br>Enter a value of 1 to 100 NPCs, please.</p>"
+            return "<p><br><br>Enter a value of 1 to 199 NPCs, please.</p>"
 
     run(host='localhost', port='8080')
 

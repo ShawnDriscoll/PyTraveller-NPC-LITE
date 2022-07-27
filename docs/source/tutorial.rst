@@ -20,9 +20,9 @@ The default value is *Random*.
 .. Warning::
    Your inputted data is **case-sensitive**.
    
-For **How many NPCs**, choose a value from 1 to 100.
+For **How many NPCs**, choose a value from 1 to 199.
 
-The default value is *10*.
+The default value is *25*.
 
 For **Characteristic Roll**, you may enter a roll type that you are familiar with when doing your Traveller
 character generation.

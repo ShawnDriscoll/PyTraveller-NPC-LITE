@@ -1,6 +1,13 @@
 **What's New?**
 ===============
 
+New in version 0.3.2
+
+Removed most of the generic skills in favor of specialized ones.
+199 NPC's can be generated at once now.
+Some NPCs will default to speaking Vilani instead of Anglic.
+
+
 New in version 0.3.1
 
 Renamed skills back to their original Mongoose Traveller names.
