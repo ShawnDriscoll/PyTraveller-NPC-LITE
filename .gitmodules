@@ -1,0 +1,3 @@
+[submodule "rpg_tools/pydice"]
+	path = rpg_tools/pydice
+	url = git@github.com:ShawnDriscoll/pydice.git

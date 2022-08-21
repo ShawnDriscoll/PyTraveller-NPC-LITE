@@ -15,9 +15,9 @@ Download the PDF from https://readthedocs.org/projects/pytravliteguide/downloads
 Requirements
 ------------
 
-* **Windows 10**
+* **Windows 10 or Linux**
 
-   It might not work in OSX or Linux.
+   It might not work in OSX.
    
 * **Python 3.9**
    
@@ -27,6 +27,15 @@ Requirements
 * **bottle 0.12.19**
 
    bottle testing has begun with the release of 0.1.0.
+
+
+Installation
+------------
+
+::
+
+   git submodule update --init
+   pip3 install bottle
 
 
 Promo

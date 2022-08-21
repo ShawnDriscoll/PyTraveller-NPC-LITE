@@ -15,7 +15,7 @@
 # Traveller is a registered trademark of Far Future Enterprises.
 #
 
-from rpg_tools.pydice import roll
+from rpg_tools.pydice.pydice import roll
 import os
 import logging
 from random import randint
