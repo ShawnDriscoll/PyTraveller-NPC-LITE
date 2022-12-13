@@ -1,6 +1,11 @@
 **What's New?**
 ===============
 
+New in version 0.3.5
+--------------------
+
+Updated to Python 3.11.0.
+
 New in version 0.3.2
 
 Removed most of the generic skills in favor of specialized ones.

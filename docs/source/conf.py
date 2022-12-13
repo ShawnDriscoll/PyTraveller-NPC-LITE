@@ -36,7 +36,7 @@ master_doc = 'index'
 
 # General substitutions.
 project = 'PyTravLITE Guide'
-copyright = '2022, SHONNER CORP'
+copyright = '2023, SHONNER CORP'
 author = 'Shawn Driscoll'
 
 # The default replacements for |version| and |release|, also used in various
@@ -45,7 +45,7 @@ author = 'Shawn Driscoll'
 # The short X.Y version.
 version = '0.3'
 # The full version, including alpha/beta/rc tags.
-release = '(New 0.3.2 Edition)'
+release = '0.3.5 (First Printing)'
 
 # There are two options for replacing |today|: either, you set today to some
 # non-false value, then it is used:
@@ -92,8 +92,8 @@ pygments_style = 'sphinx'
 # else:
     # html_theme = 'nature'
 
-html_theme = 'sphinx_rtd_theme'
-#html_theme = 'agogo'
+#html_theme = 'sphinx_rtd_theme'
+html_theme = 'agogo'
 #html_theme = 'nature'
 
 # The name for this set of Sphinx documents.  If None, it defaults to

@@ -1,8 +1,8 @@
 #
-# LITE chargen app for Traveller NPCs v0.3.2.
+# LITE chargen app for Traveller NPCs v0.3.5.
 # https://github.com/ShawnDriscoll/PyTraveller-NPC-LITE
 #
-# This LITE CharGen for Traveller is a Python 3.9.13 program for generating
+# This LITE CharGen for Traveller is a Python 3.11.0 program for generating
 # NPCs for Traveller.
 #
 # bottle testing has begun with the release of 0.1.0.
@@ -24,7 +24,7 @@ import json
 
 
 __author__ = 'Shawn Driscoll <shawndriscoll@hotmail.com>\nshawndriscoll.blogspot.com'
-__version__ = '0.3.2'
+__version__ = '0.3.5'
 __app__ = 'PyTravLITE ' + __version__
 
 

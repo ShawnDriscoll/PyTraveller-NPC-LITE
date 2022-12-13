@@ -39,17 +39,13 @@ Requirements
 * **Microsoft Windows**
    
    **PyTravLITE** has been tested on Windows 10 only.
-   It has not been tested on MacOS or Linux.
+   It has not been tested on Windows 11.
    
-* **Python 3.9**
+* **Python 3.11**
    
    **PyTravLITE** was written using the C implementation of Python
-   version 3.9. Also known as CPython.
+   version 3.11. Also known as CPython.
    
-* **bottle 0.12.19**
+* **bottle 0.12.23**
 
    bottle is the web framework used for serving the web page requests.
-
-   
-.. Warning::
-   **PyTravLITE** will not work with **Python 2.7-**.

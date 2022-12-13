@@ -5,7 +5,7 @@
 .. figure:: images/pytravlite_book_cover_art.png
 
 
-**PyTravLITE** is a Python 3.9 program that generates NPCs for Mongoose Traveller 1st and 2nd Editions in a web browser.
+**PyTravLITE** is a Python 3.11 program that generates NPCs for Mongoose Traveller 1st and 2nd Editions in a web browser.
 
 Read the **PyTravLITE Guide** at http://pytravliteguide.readthedocs.io
 
@@ -17,14 +17,14 @@ Requirements
 
 * **Windows 10**
 
-   It might not work in OSX or Linux.
+   It hasn't been tested for Windows 11.
    
-* **Python 3.9**
+* **Python 3.11**
    
    **PyTravCalc** was written using the C implementation of Python
-   version 3.9. Also known as CPython.
+   version 3.11. Also known as CPython.
 
-* **bottle 0.12.19**
+* **bottle 0.12.23**
 
    bottle testing has begun with the release of 0.1.0.
 
@@ -68,6 +68,10 @@ Things To-Do
 
 **Known History**
 
+* v0.3.5
+
+  Updated to Python 3.11.0.
+
 * v0.3.2
 
   Removed most of the generic skills in favor of specialized ones.
@@ -91,16 +95,11 @@ Things To-Do
   Quirks have been added for NPCs.
 
 
-Warning
--------
-
-**PyTravLITE** will not work with **Python 2.7-**.
-
 
 Contact
 -------
 Questions? Please contact shawndriscoll@hotmail.com
 
 The Traveller game in all forms is owned by Far Future Enterprises.
-Copyright 1977 - 2022 Far Future Enterprises.
+Copyright 1977 - 2023 Far Future Enterprises.
 Traveller is a registered trademark of Far Future Enterprises.
