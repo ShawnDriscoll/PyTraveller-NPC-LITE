@@ -4,6 +4,11 @@
 New in version 0.3.5
 --------------------
 
+Updated to Python 3.11.6.
+Random names generator has been tweaked a bit.
+
+New in version 0.3.5
+
 Updated to Python 3.11.0.
 
 New in version 0.3.2
