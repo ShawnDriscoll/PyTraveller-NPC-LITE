@@ -1,7 +1,7 @@
 **What's New?**
 ===============
 
-New in version 0.3.5
+New in version 0.3.6
 --------------------
 
 Updated to Python 3.11.6.
