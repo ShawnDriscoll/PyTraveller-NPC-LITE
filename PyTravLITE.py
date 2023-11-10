@@ -1,8 +1,8 @@
 #
-# LITE chargen app for Traveller NPCs v0.3.5.
+# LITE chargen app for Traveller NPCs v0.3.6.
 # https://github.com/ShawnDriscoll/PyTraveller-NPC-LITE
 #
-# This LITE CharGen for Traveller is a Python 3.11.0 program for generating
+# This LITE CharGen for Traveller is a Python 3.11.6 program for generating
 # NPCs for Traveller.
 #
 # bottle testing has begun with the release of 0.1.0.
@@ -24,7 +24,7 @@ import json
 
 
 __author__ = 'Shawn Driscoll <shawndriscoll@hotmail.com>\nshawndriscoll.blogspot.com'
-__version__ = '0.3.5'
+__version__ = '0.3.6'
 __app__ = 'PyTravLITE ' + __version__
 
 
@@ -286,34 +286,34 @@ def app():
     CC  = 5
     
     ic_sound = ['b','br','c','ch','d','g',
-                     'h','j','k','l','m','p',
-                     'r','s','st','sh',
-                     't','v','w','z']
-    ic_freq = [28,12,20,16,27,9,20,20,13,
-                    28,24,27,24,30,13,25,
+                         'h','j','k','l','m','n','p',
+                         'r','s','st','sh',
+                         't','v','w','z']
+    ic_freq = [28,12,20,16,27,9,20,20,17,
+                    28,24,10,27,24,30,13,25,
                     20,6,16,4]
     
     v_sound = ['a','e','i','o','u']
     v_freq = [16,20,10,7,3]
 
     mc_sound = ['g','lt','ns','nst','ls','ll','nn']
-    mc_freq = [20,3,18,16,18,4,3]
+    mc_freq = [5,3,18,16,18,4,3]
 
-    fc_sound = ['ch','ck','d','dy','dyne',
-                     'hl','li','la','le','ler',
+    fc_sound = ['i','s','r','ch','ck','d','dy',
+                     'li','la','ler',
                      'nn','m','man','ma','mer','ny',
-                     'me','n','nas','ne','ng',
+                     'me','n','ne','ng',
                      'ner','nor','nie',
                      'rie','rlie','rly','rie','rt',
                      'ry','sa','sha','nshi','nski','son',
                      'nson','th','ta','ti','t','v',
                      'za','ue','than',
                      'lam','lis','lus','ton','tis','tus',
-                     'love','se','nter','ll']
-    fc_freq = [6,13,22,12,3,3,3,10,6,10,7,
-                    25,10,4,13,12,5,27,11,4,14,13,17,7,6,5,5,6,3,
+                     'se','nter','ll','mison','som','er','or','rry']
+    fc_freq = [9,7,7,6,13,22,2,3,10,10,7,
+                    25,10,4,13,12,5,27,4,14,3,3,5,6,2,2,3,3,
                     21,10,3,8,3,20,9,14,10,16,11,8,6,8,10,7,6,5,7,7,4,
-                    4,12,5,4]
+                    12,5,4,3,3,7,4,6]
     
     for i in range(len(ic_sound)):
         log.debug(ic_sound[i] + ' ' + str(ic_freq[i]))
@@ -477,23 +477,67 @@ def app():
                             first_name = last_name
                             last_name = temp
 
-                        if first_name[len(first_name) - 1] == 'a' \
-                               or first_name[len(first_name) - 3:len(first_name)] == 'nny' \
-                               or first_name[len(first_name) - 2:len(first_name)] == 'ne' \
-                               or first_name[len(first_name) - 2:len(first_name)] == 'se' \
-                               or first_name[len(first_name) - 2:len(first_name)] == 'ie' \
-                               or first_name[len(first_name) - 1] == 'i' \
-                               or first_name[len(first_name) - 3:len(first_name)] == 'del' \
-                               or first_name[len(first_name) - 2:len(first_name)] == 'ly' \
-                               or first_name[len(first_name) - 2:len(first_name)] == 'll' \
-                               or first_name[len(first_name) - 4:len(first_name)] == 'lynn' \
-                               or first_name[len(first_name) - 2:len(first_name)] == 'le' \
-                               or first_name[len(first_name) - 3:len(first_name)] == 'ndy' \
-                               or first_name[0:2] == 'Gw' \
-                               or first_name[0:2] == 'Qu':
-                            sex = female
+                        if len(first_name) == 3:
+                            if first_name[len(first_name) - 2:len(first_name)] == 'im' \
+                                    or first_name[len(first_name) - 2:len(first_name)] == 'om':
+                                if first_name[0] == 'T' or first_name[0] == 'J':
+                                    sex = male
+                                else:
+                                    sex = female
+                            else:
+                                if first_name == 'Sam' or first_name == 'Joe' or first_name == 'Pat':
+                                    if roll('d4') > 1:
+                                        sex = male
+                                    else:
+                                        sex = female
+                                else:
+                                    if first_name[len(first_name) - 1] == 'a' \
+                                            or first_name[len(first_name) - 4:len(first_name)] == 'enny' \
+                                            or first_name[len(first_name) - 2:len(first_name)] == 'ne' \
+                                            or first_name[len(first_name) - 2:len(first_name)] == 'se' \
+                                            or first_name[len(first_name) - 2:len(first_name)] == 'ie' \
+                                            or first_name[len(first_name) - 1] == 'i' \
+                                            or first_name[len(first_name) - 3:len(first_name)] == 'del' \
+                                            or first_name[len(first_name) - 3:len(first_name)] == 'uth' \
+                                            or first_name[len(first_name) - 3:len(first_name)] == 'eth' \
+                                            or first_name[len(first_name) - 2:len(first_name)] == 'ly' \
+                                            or first_name[len(first_name) - 2:len(first_name)] == 'en' \
+                                            or first_name[len(first_name) - 3:len(first_name)] == 'ill' \
+                                            or first_name[len(first_name) - 3:len(first_name)] == 'ell' \
+                                            or first_name == 'Pam' \
+                                            or first_name == 'Amy' \
+                                            or first_name[len(first_name) - 2:len(first_name)] == 'le' \
+                                            or first_name[len(first_name) - 4:len(first_name)] == 'indy' \
+                                            or first_name[len(first_name) - 4:len(first_name)] == 'lynn' \
+                                            or first_name[0:2] == 'Gw' \
+                                            or first_name[0:2] == 'Qu':
+                                        sex = female
+                                    else:
+                                        sex = male                        
                         else:
-                            sex = male
+                            if first_name[len(first_name) - 1] == 'a' \
+                                    or first_name[len(first_name) - 4:len(first_name)] == 'enny' \
+                                    or first_name[len(first_name) - 2:len(first_name)] == 'ne' \
+                                    or first_name[len(first_name) - 2:len(first_name)] == 'se' \
+                                    or first_name[len(first_name) - 2:len(first_name)] == 'ie' \
+                                    or first_name[len(first_name) - 1] == 'i' \
+                                    or first_name[len(first_name) - 3:len(first_name)] == 'del' \
+                                    or first_name[len(first_name) - 3:len(first_name)] == 'uth' \
+                                    or first_name[len(first_name) - 3:len(first_name)] == 'eth' \
+                                    or first_name[len(first_name) - 2:len(first_name)] == 'ly' \
+                                    or first_name[len(first_name) - 2:len(first_name)] == 'en' \
+                                    or first_name[len(first_name) - 3:len(first_name)] == 'ill' \
+                                    or first_name[len(first_name) - 3:len(first_name)] == 'ell' \
+                                    or first_name == 'Pam' \
+                                    or first_name == 'Amy' \
+                                    or first_name[len(first_name) - 2:len(first_name)] == 'le' \
+                                    or first_name[len(first_name) - 4:len(first_name)] == 'indy' \
+                                    or first_name[len(first_name) - 4:len(first_name)] == 'lynn' \
+                                    or first_name[0:2] == 'Gw' \
+                                    or first_name[0:2] == 'Qu':
+                                sex = female
+                            else:
+                                sex = male
                         if random_sex:
                             sex_chosen = sex
                     

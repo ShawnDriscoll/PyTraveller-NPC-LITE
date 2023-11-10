@@ -1,6 +1,6 @@
 
 **PyTravLITE: CharGen for Traveller**
-===========================================
+=====================================
 
 .. figure:: images/pytravlite_book_cover_art.png
 
@@ -15,16 +15,16 @@ Download the PDF from https://readthedocs.org/projects/pytravliteguide/downloads
 Requirements
 ------------
 
-* **Windows 10**
+* **Windows 11**
 
-   It hasn't been tested for Windows 11.
+   It has been tested for Windows 10.
    
 * **Python 3.11**
    
    **PyTravCalc** was written using the C implementation of Python
    version 3.11. Also known as CPython.
 
-* **bottle 0.12.23**
+* **bottle 0.12.25**
 
    bottle testing has begun with the release of 0.1.0.
 
@@ -68,6 +68,11 @@ Things To-Do
 
 **Known History**
 
+* v0.3.6
+
+  Updated to Python 3.11.6.
+  Some tweaks made in the random names generator.
+  
 * v0.3.5
 
   Updated to Python 3.11.0.
