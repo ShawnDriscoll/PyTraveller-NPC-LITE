@@ -65,4 +65,4 @@ temp/
 ##############
 *.spec
 #build/
-#dist/
+dist/

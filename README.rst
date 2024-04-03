@@ -43,30 +43,16 @@ New in version 0.2.6
     :target: https://www.youtube.com/watch?v=3KpzODHM9Tw
 
 
-.. |ss| raw:: html
-
-    <strike>
-
-.. |se| raw:: html
-
-    </strike>
-
 Things To-Do
 ------------
 
 | Add faction types?
 | Add equipment?
 | Cheat codes.
-|ss|
 
-| Remove colorama code requirement.
-| Convert to Python 3.9.
-| Instruction manual.
-| Start on a To-Do.
 
-|se|
-
-**Known History**
+Known History
+-------------
 
 * v0.3.6
 
@@ -106,5 +92,5 @@ Contact
 Questions? Please contact shawndriscoll@hotmail.com
 
 The Traveller game in all forms is owned by Far Future Enterprises.
-Copyright 1977 - 2023 Far Future Enterprises.
+Copyright 1977 - 2024 Far Future Enterprises.
 Traveller is a registered trademark of Far Future Enterprises.

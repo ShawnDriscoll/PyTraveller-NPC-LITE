@@ -9,9 +9,6 @@ Running PyTravLITE
 If you have Python 3.11 installed, you can start ``PyTravLITE.py`` from a CMD prompt or double-click
 the Python script.
 
-Alternatively, if you do not have Python 3.11, you can start ``PyTravLITE.exe`` (located in the
-dist folder) from a CMD prompt or by double-clicking the executable program.
-
 Output to DOS has been depricated in this version.
 
 *New in version 0.1.0*
